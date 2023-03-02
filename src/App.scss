@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  margin: 3vh auto;
+  background-color: #eee;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,77 @@
+.note-mini {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__content {
+    font-size: 1.4rem;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+    cursor: pointer;
+    overflow-y: hidden;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &--0 {
+    background-color: white;
+    color: #000;
+
+    &:hover {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
+
+  &--1 {
+    background-color: rgb(153 27 27);
+
+    &:hover {
+      background-color: hsl(0, 70%, 30%);
+    }
+  }
+
+  &--2 {
+    background-color: rgb(217 119 6);
+
+    &:hover {
+      background-color: hsl(32, 95%, 39%);
+    }
+  }
+
+  &--3 {
+    background-color: rgb(6 95 70);
+
+    &:hover {
+      background-color: hsl(163, 88%, 15%);
+    }
+  }
+
+  &--4 {
+    background-color: rgb(7 89 133);
+
+    &:hover {
+      background-color: hsl(201, 90%, 22%);
+    }
+  }
+
+  &--5 {
+    background-color: rgb(91 33 182);
+
+    &:hover {
+      background-color: hsl(263, 69%, 37%);
+    }
+  }
+}

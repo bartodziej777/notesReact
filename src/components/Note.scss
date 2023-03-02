@@ -1,0 +1,304 @@
+.note {
+  position: absolute;
+  max-width: 90rem;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+
+  @media only screen and (max-width: 1024px) {
+    width: 90%;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__buttons {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+    & > p {
+      font-size: 2rem;
+      padding: 1rem 0;
+
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+
+    & > input[type="text"],
+    textarea {
+      font-size: 2rem;
+      padding: 1rem 0;
+      border: none;
+      background-color: transparent;
+      width: 90%;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & > input[type="text"] {
+      font-weight: 700;
+    }
+
+    & > textarea {
+      resize: none;
+      height: 40vh;
+      white-space: pre-wrap;
+    }
+  }
+
+  &__toolbar {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #eef1f6;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  &__colors {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__color {
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid #000;
+    border-radius: 100%;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    &--0 {
+      background-color: white;
+    }
+    &--1 {
+      background-color: rgb(153 27 27);
+    }
+    &--2 {
+      background-color: rgb(217 119 6);
+    }
+    &--3 {
+      background-color: rgb(6 95 70);
+    }
+    &--4 {
+      background-color: rgb(7 89 133);
+    }
+    &--5 {
+      background-color: rgb(91 33 182);
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+
+    &-close {
+      cursor: pointer;
+      font-size: 1.6rem;
+      padding: 0.5rem 2rem;
+      border: none;
+
+      &:hover {
+        transition: all 0.2s ease;
+      }
+    }
+
+    &-pin,
+    &-edit {
+      font-size: 2rem;
+      cursor: pointer;
+      fill: #000;
+
+      &:hover {
+        transition: all 0.2s ease;
+      }
+    }
+
+    &-edit {
+      margin-top: 1rem;
+    }
+  }
+
+  &--0 {
+    background-color: white;
+
+    .note__toolbar {
+      background-color: hsl(0, 0%, 90%);
+    }
+
+    .note__btn-close {
+      background-color: hsl(0, 0%, 80%);
+
+      &:hover {
+        background-color: hsl(0, 0%, 95%);
+      }
+    }
+
+    .note {
+      &__btn {
+        &-edit,
+        &-pin {
+          fill: black;
+
+          &--active {
+            fill: rgb(7 89 133);
+
+            &:hover {
+              fill: black;
+            }
+          }
+        }
+
+        &-edit:hover,
+        &-pin:hover {
+          fill: rgb(7 89 133);
+        }
+      }
+    }
+  }
+  &--1 {
+    background-color: rgb(153 27 27);
+
+    .note {
+      &__toolbar {
+        background-color: hsl(0, 70%, 25%);
+      }
+      &__btn-close {
+        background-color: hsl(0, 70%, 15%);
+
+        &:hover {
+          background-color: hsl(0, 70%, 35%);
+        }
+      }
+    }
+  }
+  &--2 {
+    background-color: rgb(217 119 6);
+
+    .note {
+      &__toolbar {
+        background-color: hsl(32, 95%, 34%);
+      }
+      &__btn-close {
+        background-color: hsl(32, 95%, 24%);
+
+        &:hover {
+          background-color: hsl(32, 95%, 44%);
+        }
+      }
+    }
+  }
+  &--3 {
+    background-color: rgb(6 95 70);
+
+    .note {
+      &__toolbar {
+        background-color: hsl(163, 88%, 10%);
+      }
+      &__btn-close {
+        background-color: hsl(163, 88%, 5%);
+
+        &:hover {
+          background-color: hsl(163, 88%, 20%);
+        }
+      }
+    }
+  }
+  &--4 {
+    background-color: rgb(7 89 133);
+
+    .note {
+      &__toolbar {
+        background-color: hsl(201, 90%, 17%);
+      }
+      &__btn-close {
+        background-color: hsl(201, 90%, 7%);
+
+        &:hover {
+          background-color: hsl(201, 90%, 27%);
+        }
+      }
+    }
+  }
+  &--5 {
+    background-color: rgb(91 33 182);
+
+    .note {
+      &__toolbar {
+        background-color: hsl(263, 69%, 32%);
+      }
+      &__btn-close {
+        background-color: hsl(263, 69%, 22%);
+
+        &:hover {
+          background-color: hsl(263, 69%, 42%);
+        }
+      }
+    }
+  }
+
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  &--5 {
+    p,
+    input[type="text"],
+    textarea,
+    .note__btn-close {
+      color: white;
+    }
+
+    .note {
+      &__btn {
+        &-edit,
+        &-pin {
+          fill: white;
+
+          &--active {
+            fill: black;
+
+            &:hover {
+              fill: white;
+            }
+          }
+        }
+
+        &-edit:hover,
+        &-pin:hover {
+          fill: black;
+        }
+      }
+    }
+
+    &__content > input::placeholder,
+    textarea::placeholder {
+      color: #ccc;
+    }
+
+    ///
+    input::placeholder {
+      color: #ccc;
+    }
+  }
+}
